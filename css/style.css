@@ -3,7 +3,6 @@ padding: 0;
     margin: 0;
 
 }
-
 @font-face {
     font-family: 'Raleway';
     src: url('../fonts/Raleway-Regular.eot');
@@ -16,6 +15,11 @@ padding: 0;
     font-weight: normal;
     font-style: normal;
 }
+body{
+    font-family: "Raleway";
+}
+
+
 /*styles for menu bar*/
 header {
     background-color: black;
@@ -44,11 +48,34 @@ header ul li {
 }
 
 span {
-    color: #8de0d2;
+    color: #27C7AB;
 }
 header ul li:last-child {
     margin-right: 100px;
 }
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropdown-menu {
+    /*display: none;*/
+    position: absolute;
+    top: 40px;
+    background-color: #000;
+    width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-bottom: 10px;
+}
+.dropdown-menu li {
+    text-transform: none;
+    padding-top: 10px;
+}
+/* Way to display dropdown memu with CSS with the help of :hover
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+*/
 /*end of styles for menu bar*/
 
 
@@ -63,18 +90,19 @@ background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,
     padding-top: 100px;
     height: 400px;
 }
-.right {
+.left {
     float: left;
     width: 30%;
     box-sizing: border-box;
 
 
 }
-.left {
+.right {
     text-align: center;
-    width: 30%;
+    width: 40%;
     float: left;
     margin-left: 150px;
+    margin-right: 0px;
 }
 .about h1 {
     padding-top: 60px;
@@ -94,7 +122,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,
     padding: 15px 20px 15px 20px;
 
     color: #fff;
-    background-color: #8de0d2;
+    background-color: #27C7AB;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -110,7 +138,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,
     margin-top: 150px;
 }
 i {
-    border: solid #8de0d2;
+    border: solid #27C7AB;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 20px;
@@ -146,6 +174,8 @@ i {
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .img-description img {
@@ -154,6 +184,22 @@ i {
 
 .products h2 {
     position: relative;
+}
+/*Styles for overlay*/
+.overlay {
+    box-sizing: border-box;
+    width: 95%;
+    height: 60px;
+    background-color:rgba(222, 222, 222, 0.5);;
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+    padding-left: 10px;
+
+}
+.overlay h2 {
+    padding-top: 10px;
+
 }
 
 /*Styles for underline*/
@@ -167,14 +213,15 @@ i {
 
     border-width: 0px 0 6px;
     border-style: solid;
-    border-color: #8de0d2; /*blue on the page*/
+    border-color: #27C7AB; /*blue on the page*/
 }
 
 .products p {
     margin-top: 20px;
+    color: #9E9E9E;
 }
 .description-text {
-    border: 1px solid #999999;
+    border: 1px solid #BCBCBC;
     padding: 20px 20px;
     height: 270px;
     margin-left: 10px;
@@ -186,17 +233,17 @@ i {
 
 /*Styles for price part*/
 .price {
-    background-color: #e9e9e9;
+    background-color: #F1F1F1;
     height: 800px;
 }
-.price h2 {
+.section-heading {
  text-transform: uppercase;
     position: relative;
     margin-bottom: 100px;
     padding-top: 50px;
 
 }
-.price h2::after {
+.section-heading::after {
     content: '';
 
     width: 32%;
@@ -206,27 +253,27 @@ i {
 
     border-width: 0px 0 6px;
     border-style: solid;
-    border-color: #8de0d2;
+    border-color: #27C7AB;
 }
 .page-part {
     width: 32%;
     height: 500px;
     box-sizing: border-box;
     text-align: center;
-    border: 2px solid #939393;
+    border: 2px solid #C2C2C2;
     float: left;
     position: relative;
     z-index: 1;
     margin-left: 10px;
-    background-color: #f1f1f1;
+    background-color: #F9F9F9;
 }
 
 .big-circle {
     width: 70px;
     height: 70px;
-    border: 2px solid #939393;
+    border: 2px solid #C2C2C2;
     border-radius: 50%;
-    background-color: #f1f1f1;
+    background-color: #f9f9f9;
     position: absolute;
     left: 160px;
     top: -52px;
@@ -238,7 +285,7 @@ i {
     height: 40px;
 
     border-radius: 50%;
-    background-color: #939393;
+    background-color: #C2C2C2;
     position: absolute;
     top:-35px;
     left: 177px;
@@ -248,19 +295,23 @@ i {
     padding-top: 50px;
     text-transform: uppercase;
     font-size: 38px;
+    color: #27C7AB;
+
 }
 .price-month {
     width: 120px;
     height: 120px;
-    border: 2px solid #939393;
+    border: 2px solid #C2C2C2;
     border-radius: 50%;
     position: absolute;
     left: 130px;
     top: 120px;
     background-color: #fff;
 }
+
 .price-month p {
     text-transform: uppercase;
+    color: #C2C2C2;
 
 }
 sup {
@@ -276,11 +327,11 @@ font-size: 35px;
 
 .plan p {
     margin: 0 0;
-    background-color: #bdbdbd;
+    background-color: #F1F1F1;
     line-height: 30px;
 }
 .plan p:nth-child(2n+1) {
-    background-color: #a8a8a8;
+    background-color: #E4E4E4;
 }
 .page-part a {
     text-decoration: none;
@@ -290,7 +341,7 @@ font-size: 35px;
     height: 30px;
     width: 160px;
     padding-top: 10px;
-    background-color: #8de0d2;
+    background-color: #27C7AB;
     border-radius: 5px;
     color: #fff;
     text-transform: uppercase;
@@ -301,12 +352,12 @@ font-size: 35px;
 
 /*Separate styles for middle box*/
 .middle-box {
-    background-color: #8de0d2;
-    border: 2px solid #8de0d2;
+    background-color: #27C7AB;
+    border: 2px solid #27C7AB;
 }
 .middle-box .big-circle {
-    background-color: #8de0d2;
-    border: 2px solid #8de0d2;
+    background-color: #27C7AB;
+    border: 2px solid #27C7AB;
 }
 .middle-box .small-circle {
     background-color: #fff;
@@ -315,14 +366,114 @@ font-size: 35px;
     color: #fff;
 }
 .middle-box .price-month {
-    border: 2px solid #8de0d2;
-    color: #8de0d2;
+    border: 2px solid #27C7AB;
+    color: #27C7AB;
 }
 .middle-box .plan p:nth-child(2n+1) {
     background-color: #fff;
 }
 .middle-box a {
     background-color: #fff;
-    color: #8de0d2;
+    color: #27C7AB;
 }
 /*End of separate styles for middle box*/
+/*Styles for section Contact Us*/
+
+.contact {
+    height: 550px;
+}
+.contact h2 {
+    margin-bottom: 50px;
+}
+
+.contact-left {
+    width: 70%;
+    float: left;
+}
+.contact-right {
+    width: 30%;
+    float: left;
+}
+.confirm {
+    margin-top: 20px;
+}
+.confirm img {
+    border: 1px solid #8de0d2;
+    margin-right: 20px;
+    float: left;
+}
+.confirm p {
+
+}
+.contact a {
+
+    text-decoration: none;
+    display: inline-block;
+text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    width: 260px;
+    padding-top: 10px;
+    background-color: #27C7AB;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-left: -70px;
+
+}
+input {
+    width: 70%;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #27C7AB;
+
+}
+::placeholder {
+    color: #9E9E9E;
+    font-size: 14px;
+    font-family: 'Raleway';
+
+}
+textarea {
+    width: 70%;
+    border: 1px solid #27C7AB;
+    resize: none;
+}
+/*styles for footer*/
+footer {
+    width: 100%;
+    height: 80px;
+    float: left;
+    color: #9E9E9E;
+}
+.footer-left {
+    width: 70%;
+    float: left;
+
+    height: 80px;
+}
+.footer-right {
+    width: 30%;
+
+    height: 80px;
+    float: left;
+    position: relative;
+    text-transform: uppercase;
+}
+.footer-right span {
+    font-weight: bold;
+    color: #000;
+}
+.social-icons {
+    float: left;
+}
+
+.social-name {
+    float: left;
+    position: absolute;
+right: 50px;
+}
+.social-name p{
+    margin-top: 10px;
+}

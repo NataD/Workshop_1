@@ -14,14 +14,19 @@
         </div>
         <nav>
             <ul>
+                <div class="dropdown">
                 <li>O Firmie</li>
-                    <!--<ul>
+                    <div class="dropdown-menu">
+                        <ul>
                         <li>Aktualności</li>
                         <li>Nasz team</li>
                         <li>Historia</li>
-                    </ul>-->
+                    </ul>
+                    </div>
+                </div>
                 <li>Galeria</li>
                 <li>Kontakt</li>
+
             </ul>
         </nav>
     </header>
@@ -33,11 +38,11 @@
             <div class="arrow">
                 <i class="arrow-left"></i>
             </div>
-        <div class="right">
+        <div class="left">
 
         <img src="images/black_chair.png">
         </div>
-        <div class="left">
+        <div class="right">
             <h1>Sit <span>on</span> Our <span>Chair</span></h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quos, voluptatem. Error est exercitationem
@@ -45,7 +50,7 @@
             tempora voluptatum.
         </p>
 
-        <a href="#">Zobacz więncej</a>
+        <a href="#">See more</a>
 
         </div>
             <div class="arrow">
@@ -59,9 +64,15 @@
         <div class="container">
             <div class="img-description">
             <img src="images/box1_img.jpg">
+                <div class="overlay">
+                    <h2>Chair Clair</h2>
+                </div>
             </div>
         <div class="img-description">
             <img src="images/box2_img.jpg">
+            <div class="overlay">
+                <h2>Chair Margarita</h2>
+            </div>
         </div>
         <div class="img-description description-text">
             <h2>Finds all inputs</h2>
@@ -152,14 +163,46 @@
     </section>
     <section class="contact">
         <div class="container">
+            <h2 class="section-heading">Contact</h2>
             <div class="contact-left">
-                <h2 class="section-heading">Contact</h2>
+                <form>
+                    <input type="text" name="first_name" placeholder="Name">
+                    <br>
+                    <input type="email" name="email" placeholder="Email">
+                    <br>
+                    <textarea rows="20" cols="50" name="message" placeholder="Message"></textarea>
+                </form>
+            </div>
+            <div class="contact-right">
+                <img src="images/red_chair.png">
+                <div class="confirm">
+                    <img src="images/form_ok.jpg">
+                    <p>Agree for usage of personal <br>data</p>
+                </div>
+                <a href="#">
+                    Send
+                </a>
             </div>
         </div>
     </section>
 
     <footer>
-
+        <div class="container">
+            <div class="footer-left">
+                <p>Copyright 2014 | All Rights Reserved - Sit On Chair</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-icons">
+                <img src="images/flickr.png">
+                <img src="images/vimeo.png">
+                <img src="images/pinterest.png">
+                <img src="images/twitter.png">
+                </div>
+                <div class="social-name">
+                <p>Sit <span>on</span> Chair</p>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
