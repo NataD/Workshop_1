@@ -130,3 +130,199 @@ i {
     /*margin-left: 20px;
     margin-bottom: 140px;*/
 }
+
+/*styles for products section*/
+
+.products {
+
+    width: 100%;
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.img-description {
+    float: left;
+    width: 33%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.img-description img {
+    width: 100%;
+}
+
+.products h2 {
+    position: relative;
+}
+
+/*Styles for underline*/
+.products h2::after {
+    content: '';
+
+    width: 50%;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    border-width: 0px 0 6px;
+    border-style: solid;
+    border-color: #8de0d2; /*blue on the page*/
+}
+
+.products p {
+    margin-top: 20px;
+}
+.description-text {
+    border: 1px solid #999999;
+    padding: 20px 20px;
+    height: 270px;
+    margin-left: 10px;
+}
+
+
+
+
+
+/*Styles for price part*/
+.price {
+    background-color: #e9e9e9;
+    height: 800px;
+}
+.price h2 {
+ text-transform: uppercase;
+    position: relative;
+    margin-bottom: 100px;
+    padding-top: 50px;
+
+}
+.price h2::after {
+    content: '';
+
+    width: 32%;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    border-width: 0px 0 6px;
+    border-style: solid;
+    border-color: #8de0d2;
+}
+.page-part {
+    width: 32%;
+    height: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #939393;
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+    background-color: #f1f1f1;
+}
+
+.big-circle {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #939393;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    position: absolute;
+    left: 160px;
+    top: -52px;
+
+    z-index: 2;
+}
+.small-circle {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: #939393;
+    position: absolute;
+    top:-35px;
+    left: 177px;
+    z-index: 3;
+}
+.page-part h3 {
+    padding-top: 50px;
+    text-transform: uppercase;
+    font-size: 38px;
+}
+.price-month {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #939393;
+    border-radius: 50%;
+    position: absolute;
+    left: 130px;
+    top: 120px;
+    background-color: #fff;
+}
+.price-month p {
+    text-transform: uppercase;
+
+}
+sup {
+    font-size: 16px;
+}
+.price-month p:first-child {
+    padding-top: 25px;
+font-size: 35px;
+}
+.plan {
+    padding-top: 200px;
+}
+
+.plan p {
+    margin: 0 0;
+    background-color: #bdbdbd;
+    line-height: 30px;
+}
+.plan p:nth-child(2n+1) {
+    background-color: #a8a8a8;
+}
+.page-part a {
+    text-decoration: none;
+    display: inline-block;
+
+    vertical-align: middle;
+    height: 30px;
+    width: 160px;
+    padding-top: 10px;
+    background-color: #8de0d2;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+    left: 120px;
+}
+
+/*Separate styles for middle box*/
+.middle-box {
+    background-color: #8de0d2;
+    border: 2px solid #8de0d2;
+}
+.middle-box .big-circle {
+    background-color: #8de0d2;
+    border: 2px solid #8de0d2;
+}
+.middle-box .small-circle {
+    background-color: #fff;
+}
+.middle-box h3 {
+    color: #fff;
+}
+.middle-box .price-month {
+    border: 2px solid #8de0d2;
+    color: #8de0d2;
+}
+.middle-box .plan p:nth-child(2n+1) {
+    background-color: #fff;
+}
+.middle-box a {
+    background-color: #fff;
+    color: #8de0d2;
+}
+/*End of separate styles for middle box*/
