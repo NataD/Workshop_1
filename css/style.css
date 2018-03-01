@@ -46,7 +46,6 @@ body{
     font-weight: normal;
 }
 
-
 /*styles for menu bar*/
 header {
     background-color: black;
@@ -190,6 +189,10 @@ header ul li:last-child {
     font-size: 14px;
     border-radius: 10px;
 }
+
+.about a:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
 /*styles for arrows*/
 .arrow {
     float: left;
@@ -253,7 +256,6 @@ i {
     bottom: 15px;
     z-index: 1;
     padding-left: 10px;
-
 }
 
 .overlay h2 {
@@ -313,6 +315,21 @@ i {
     margin-left: 10px;
     height: 254px;
     width: 332px;
+    display: none;
+}
+
+/*Styles for hover over images with chairs*/
+.img-description:hover img {
+    display: none;
+
+}
+.img-description:hover .description-text{
+    display:block;
+    margin-top: 0px;
+
+}
+.img-description:hover .overlay {
+    display: none;
 }
 
 /*Styles for price part*/
@@ -330,6 +347,10 @@ i {
     letter-spacing: 1px;
 }
 
+.price .section-heading {
+    padding-left: 20px;
+}
+
 .section-heading::after {
     content: '';
     width: 330px;
@@ -341,6 +362,12 @@ i {
     border-color: #27C7AB;
 }
 
+.price .section-heading::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+}
+
 .page-part {
     width: 330px;
     height: 500px;
@@ -350,7 +377,8 @@ i {
     float: left;
     position: relative;
     z-index: 1;
-    margin-left: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
     background-color: #F9F9F9;
 }
 
@@ -444,39 +472,47 @@ sup {
     left: 104px;
 }
 
-/*Separate styles for middle box*/
-.middle-box {
+.page-part:hover {
     background-color: #27C7AB;
     border: 2px solid #27C7AB;
-}
+    transition: background-color 1s ease-out;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+ }
 
-.middle-box .big-circle {
+/*Separate styles for hover over boxes with price plans*/
+.page-part:hover .big-circle {
     background-color: #27C7AB;
     border: 2px solid #27C7AB;
+    transition: background-color 1s ease-out;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
 }
 
-.middle-box .small-circle {
+.page-part:hover .small-circle {
     background-color: #fff;
 }
 
-.middle-box h3 {
+.page-part:hover h3 {
     color: #fff;
 }
 
-.middle-box .price-month {
+.page-part:hover .price-month {
     border: 2px solid #27C7AB;
     color: #27C7AB;
 }
 
-.middle-box .plan p:nth-child(2n+1) {
+.page-part:hover .plan p:nth-child(2n+1) {
     background-color: #fff;
 }
 
-.middle-box a {
+.page-part:hover a {
     background-color: #fff;
     color: #27C7AB;
 }
-/*End of separate styles for middle box*/
+/*End of separate styles for hover over boxes with price plans*/
 /*Styles for section Contact Us*/
 
 .contact {
@@ -508,7 +544,7 @@ sup {
 }
 
 .confirm p {
-color: #9E9E9E;
+    color: #9E9E9E;
 }
 
 .contact a {
@@ -517,7 +553,7 @@ color: #9E9E9E;
     text-align: center;
     vertical-align: middle;
     height: 70px;
-    width: 343px;
+    width: 290px;/*343px;*/
     padding-top: 10px;
     background-color: #27C7AB;
     border-radius: 5px;
@@ -530,20 +566,18 @@ color: #9E9E9E;
     padding-top: 20px;
 }
 
+.contact a:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
 input {
     width: 634px;
     height: 30px;
     margin-bottom: 26px;
+    padding-left:10px;
     border: 1px solid #27C7AB;
     height: 66px;
-}
-
-::placeholder {
-    color: #9E9E9E;
     font-size: 24px;
-    font-family: 'Raleway';
-    padding-left: 10px;
-    padding-top: 21px;
 }
 
 textarea {
@@ -551,7 +585,18 @@ textarea {
     height: 190px;
     border: 1px solid #27C7AB;
     resize: none;
+    font-size: 24px;
+    padding-left: 10px;
+    padding-top: 21px;
 }
+
+::placeholder {
+    color: #9E9E9E;
+    font-size: 24px;
+    font-family: 'Raleway';
+    padding-top: 20px;
+}
+
 /*styles for footer*/
 footer {
     width: 100%;
